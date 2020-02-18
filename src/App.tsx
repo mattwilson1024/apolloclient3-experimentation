@@ -2,12 +2,12 @@ import './App.css';
 
 import React from 'react';
 
-import PokemonDetails from './components/PokemonDetails';
+import Artist from './components/Artist';
 
 function App() {
   return (
     <div className="App">
-      <PokemonDetails />
+      <Artist />
     </div>
   );
 }

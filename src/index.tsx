@@ -8,9 +8,11 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 const client = new ApolloClient({
-  cache: new InMemoryCache(),
+  cache: new InMemoryCache({
+    
+  }),
   link: new HttpLink({
-    uri: 'https://graphql-pokemon.now.sh',
+    uri: 'https://spotify-graphql-server.herokuapp.com/graphql',
   })
 });
 

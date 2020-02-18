@@ -1,3 +1,13 @@
+.toolbar {
+  background-color: #eee;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.toolbar button {
+  margin-right: 10px;
+}
+
 li {
   list-style: none;
 }

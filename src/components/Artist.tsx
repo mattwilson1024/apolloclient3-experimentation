@@ -19,7 +19,7 @@ const GET_ARTIST_WITH_ALBUMS = gql`
 export default function Artist() {
   const { data, loading, error } = useQuery(GET_ARTIST_WITH_ALBUMS, {
     variables: {
-      artistName: 'Red Hot Chili Peppers'
+      artistName: 'DC Breaks'
     }
   })
 
@@ -30,7 +30,7 @@ export default function Artist() {
   if (!firstMatchingArtist) { return <p>No matching artist found</p>; }
 
   return (
-    <div style={{ backgroundColor: '#eee', padding: '10px' }}>
+    <div style={{ backgroundColor: '#f1fff1', padding: '10px' }}>
       <h1>{ firstMatchingArtist.name }</h1>
 
       <h2>Albums</h2>

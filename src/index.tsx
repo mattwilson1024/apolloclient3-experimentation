@@ -13,7 +13,7 @@ toast.configure();
 
 // Custom Apollo link which pops up a toast notification whenever network requests are happening, just to make the demo clearer
 const networkActivityToastLink = new ApolloLink((operation, forward) => {
-  toast("Network request!");
+  toast(`Network request: ${operation.operationName}`);
   return forward(operation);
 });
 

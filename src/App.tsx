@@ -21,7 +21,8 @@ function App() {
 
   const evictAlbumsAndGC = () => {
     cache.evict(`Artist:${artistId}`, 'albums');
-    (cache as any).gc();
+    // cache.evict(`ROOT_QUERY`, `queryArtists`);
+    cache.gc();
   }
 
   return (

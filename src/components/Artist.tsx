@@ -20,8 +20,10 @@ export default function Artist() {
   const { data, loading, error } = useQuery(GET_ARTIST_WITH_ALBUMS, {
     variables: {
       artistName: 'DC Breaks'
-    }
-  })
+    },
+    partialRefetch: true,
+    notifyOnNetworkStatusChange: true
+  });
 
   if (loading) { return <p>Loading...</p>; }
   if (error) { return <p>Error</p>; }
@@ -30,6 +32,7 @@ export default function Artist() {
   if (!firstMatchingArtist) { return <p>No matching artist found</p>; }
 
   return (
+    
     <div style={{ backgroundColor: '#f1fff1', padding: '10px' }}>
       <h1>{ firstMatchingArtist.name }</h1>
 
